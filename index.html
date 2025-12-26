@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+<body>
+    <header>
+        <h1>Job Application Tracker</h1>
+        <p>Track your job applications with ease.</p>
+    </header>
+
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div id="stats">
+            <p>Total Applications: <span id="totalApps">0</span></p>
+            <p>Applied: <span id="appliedCount">0</span></p>
+            <p>Interviewed: <span id="interviewedCount">0</span></p>
+            <p>Rejected: <span id="rejectedCount">0</span></p>
+            <p>Offered: <span id="offeredCount">0</span></p>
+        </div>
+        <button id="exportBtn">Export to CSV</button>
+    </section>
+
+    <section id="formSection">
+        <h2>Add/Edit Application</h2>
+        <form id="jobForm">
+            <label for="company">Company:</label>
+            <input type="text" id="company" required>
+
+            <label for="position">Position:</label>
+            <input type="text" id="position" required>
+
+            <label for="status">Status:</label>
+            <select id="status" required>
+                <option value="Applied">Applied</option>
+                <option value="Interviewed">Interviewed</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Offered">Offered</option>
+            </select>
+
+            <label for="date">Date Applied:</label>
+            <input type="date" id="date" required>
+
+            <label for="notes">Notes:</label>
+            <textarea id="notes" rows="3"></textarea>
+
+            <button type="submit" id="submitBtn">Add Application</button>
+            <button type="button" id="cancelBtn" style="display:none;">Cancel Edit</button>
+        </form>
+    </section>
+
+    <section id="searchSection">
+        <h2>Search & Filter</h2>
+        <input type="text" id="searchInput" placeholder="Search by company, position, or status...">
+        <select id="filterStatus">
+            <option value="">All Statuses</option>
+            <option value="Applied">Applied</option>
+            <option value="Interviewed">Interviewed</option>
+            <option value="Rejected">Rejected</option>
+            <option value="Offered">Offered</option>
+        </select>
+    </section>
+
+    <section id="listSection">
+        <h2>Your Applications</h2>
+        <table id="jobTable">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Notes</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="jobList"></tbody>
+        </table>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
