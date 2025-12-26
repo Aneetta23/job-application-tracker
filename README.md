@@ -19,6 +19,13 @@ A simple, minimal web app to track job applications. Built with vanilla HTML, CS
 - CSS3
 - JavaScript (ES6)
 
+## Live Demo
+👉 https://aneetta23.github.io/job-application-tracker/
+
+## Use Case
+This project helps students and job seekers manage multiple job applications efficiently and avoid missing follow-ups.
+
+
 ## Future Enhancements
 - Add user authentication.
 - Integrate with a database (e.g., Firebase).
